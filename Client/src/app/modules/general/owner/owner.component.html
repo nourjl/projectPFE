@@ -1,0 +1,57 @@
+<div class="col-sm">
+    <h1>Machine Owner Information</h1>
+    <form [formGroup]="documentsForm" (ngSubmit)="onFormSubmit()">
+        <div class="form-group">
+            <label for="nameOwner">Machine Owner : </label>
+            <input  formControlName="nameOwner" type="String" id="nameOwner" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="costH">Cost per hour (DT) : </label>
+            <input formControlName="costH" type="Number" id="costH" class="form-control" default=10>
+        </div>
+
+        <div class="form-group">
+            <label for="costKG">Filament cost (KG) : </label>
+            <input type="number" formControlName="costKG" id="costKG" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="filament_diameter">Filament diameter (KG) : </label>
+            <input type="number" formControlName="filament_diameter" id="filament_diameter" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="costLabor">Labor cost (DT/hour) : </label>
+            <input type="number" formControlName="costLabor" id="costLabor" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="marg">Extra margin (%) : </label>
+            <input type="text" formControlName="marg" id="marg" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="material">Material type : </label>
+            <select formControlName="material" class="form-control">
+                <option value="mat1" selected="selected">Material 1</option>
+                <option value="mat2" >Material 2</option>
+                <option value="mat3">Material 3</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="PrintSpeed">Printing speed : </label>
+            <input type="number" formControlName="PrintSpeed" id="PrintSpeed" class="form-control" required>
+        </div>
+
+
+        <div class="form-group">
+            <label for="extra">Extra cost : </label>
+            <input type="number" formControlName="extra" id="extra" class="form-control" required>
+        </div>
+        <br>
+
+        <button class="btn btn-primary" type="submit" (click)="createOwner()">Submit</button>
+        <button type="button" class="btn btn-primary" (click)="resetOwnerForm(documentsForm)">Reset</button>
+    </form>
+</div>

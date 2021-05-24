@@ -1,0 +1,38 @@
+.userInfo{
+    float:left;
+    margin-left: 20px;
+}
+.ListOwners{
+    float: right;
+    margin-right: 300px;
+}
+h1{
+    margin-top: 25px;
+    margin-bottom: 50px;
+    color:#2C3F50;
+    font-size: 25px;
+}
+label{
+    color:#2C3E50;
+    font-size: medium;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+button{
+    background-color: #159a80;
+    border-color: #148f77;
+    box-shadow: 0 0 0 0.2rem rgba(60, 198, 171, 0.5);
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.calcul{
+    position: fixed;
+    float: auto;
+}
+th{
+    font-weight: bold;
+    padding: 10px;
+
+
+}

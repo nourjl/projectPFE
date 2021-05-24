@@ -1,0 +1,73 @@
+<div class="userInfo">
+    <h1>Upload your file here! </h1>
+    <form #userForm="ngForm" (ngSubmit)="onFormSubmitUser(userForm)">
+        <div class="form-group">
+            <table>
+                <tr>
+                    <td><label for="density">Density : </label></td>
+                    <td><input type="number" ngModel name="density" id="density" required></td>
+                </tr>
+                <tr>
+                    <td><label>Upload 3D File : </label></td>
+                    <td><input type="file" ngForm name="file" id="file" (change)="handleFileInput($event,userForm)"
+                            accept=".stl,.OBJ,.FBX,.COLLADA,.3DS,.IGES,.stp"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                        <button type="button" class="btn btn-primary" (click)="resetUserForm(userForm)">Reset</button>
+                    </td>
+                </tr>
+                <!--! <tr><button type="=button" (click)="test()">test</button></tr> -->
+            </table>
+        </div>
+    </form>
+    <div class="calcul">
+        <table class="TabCalcul">
+            <tr>
+                <th>Volume</th>
+                <td>{{ v }}
+                <td>
+            </tr>
+            <tr>
+                <th>Weight </th>
+                <td>{{ w }} </td>
+            </tr>
+            <tr>
+                <th>Depth </th>
+                <td>{{ d }} </td>
+            </tr>
+            <tr>
+                <th>Height </th>
+                <td>{{ h }} </td>
+            </tr>
+            <tr>
+                <th>Time </th>
+                <td>{{ time }} </td>
+            </tr>
+            <tr>
+                <th>Final cost </th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="3">{{ cost }} DT</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<div class="ListOwners">
+    <h1>Owners List</h1>
+    <ul>
+        <li><a routerLink="#" routerLinkActive="active"
+                class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger">Ownner Example : {{ ownerName }}</a></li>
+        <ul>
+            <li>Cost per Hour : {{ costH }}</li>
+            <li>Cost per KG : {{ costKG }}</li>
+            <li>Filament diameter : {{ filament_diameter }} </li>
+        </ul>
+    </ul>
+
+</div>
