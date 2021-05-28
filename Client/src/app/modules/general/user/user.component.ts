@@ -90,10 +90,6 @@ export class UserComponent implements OnInit {
             t1.y = positions[i+1];
             t1.z = positions[i+2];
 
-            t1.x = positions[i+0];
-            t1.y = positions[i+1];
-            t1.z = positions[i+2];
-
             var t2 = {x:0,y:0,z:0};
             t2.x = positions[i+3];
             t2.y = positions[i+4];

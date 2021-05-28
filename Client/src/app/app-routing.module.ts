@@ -4,12 +4,14 @@ import { UserComponent } from './modules/general/user/user.component';
 import { OwnerComponent } from './modules/general/owner/owner.component';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ListeComponent } from './liste/liste.component';
 
 const appRoutes: Routes = [
   { path: '', component: NavbarComponent },
   { path: 'user', component: UserComponent },
   { path: 'owner', component: OwnerComponent },
-  { path: 'home', component: NavbarComponent}
+  { path: 'home', component: NavbarComponent},
+  { path: 'liste', component:ListeComponent}
 ];
 
 
@@ -19,4 +21,4 @@ const appRoutes: Routes = [
   declarations: []
 })
 export class AppRoutingModule { }
-export const routingComponents= [UserComponent, OwnerComponent, NavbarComponent]
+export const routingComponents= [UserComponent, OwnerComponent, NavbarComponent, ListeComponent]

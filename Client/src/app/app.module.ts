@@ -9,13 +9,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OwnerDataService } from './modules/general/services/owner-data.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ListeComponent } from './liste/liste.component';
+import {DataViewModule} from 'primeng/dataview';
 
 
 const appRoutes: Routes = [
   { path: '', component:  NavbarComponent },
   { path: 'user', component: UserComponent },
   { path: 'owner', component: OwnerComponent },
-  { path: 'home', component:NavbarComponent  }
+  { path: 'home', component:NavbarComponent  },
+  { path: 'liste',component:ListeComponent}
 ];
 
 @NgModule({
@@ -24,6 +27,7 @@ const appRoutes: Routes = [
     AppComponent,
     UserComponent,
     OwnerComponent,
+    ListeComponent,
 
   ],
 
@@ -33,7 +37,8 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    DataViewModule
   ],
   providers: [OwnerDataService],
   bootstrap: [AppComponent]

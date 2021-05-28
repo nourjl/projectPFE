@@ -32,3 +32,20 @@ export const createOwner = async (req, res) =>{
     res.send("owner created");
 
 }
+
+/*
+app.get('/owner', function(req, res){
+    Owner.find(function(err, owners){
+        if(err)
+            res.send(err);
+        res.json(owners);
+    });
+});
+
+app.delete('/owner/:id', function(req, res){
+    Owner.findOneAndRemove({_id:req.params.id}, function(err, owner){
+        if(err)
+            res.send(err);
+        res.json(owner);
+    });
+});*/

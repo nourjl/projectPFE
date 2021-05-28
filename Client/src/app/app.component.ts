@@ -16,6 +16,7 @@ export class AppComponent {
   changementPageOwner() :  void {
     this.router.navigate(['/owner']);
 
+
    }
 
   changementPageUser() : void {

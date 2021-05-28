@@ -4,6 +4,8 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import ownerRoutes from './routes/owner.js';
 import userRoutes from './routes/user.js';
+import ModelOwner from './models/ownerMessage.js';
+import ModelUser from './models/userMessage.js';
 
 const app = express();
 
@@ -28,12 +30,13 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
 
 mongoose.set('useFindAndModify', false);
 
-
-
-
-
-
-
+app.get('/api/owner', function(req, res){
+    ModelOwner.find(function(err, owners){
+        if(err)
+            res.send(err);
+        res.json(owners);
+    });
+});
 
 /* exemple :
 app.use((req, res, next) => {
